@@ -15,13 +15,13 @@ const questions = [
     },
     {
         text: "Kas ir šis dzīvnieks?",
-        img: "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=400&q=80",
-        correct: "a",
+        img: "https://upload.wikimedia.org/wikipedia/commons/0/06/EnglishSpotRabbitChocolate1%28cropped%29.jpg",
+        correct: "b",
         answers: { a: "Suns", b: "Trusis", c: "Zivs" }
     },
     {
         text: "Kas ir šis dzīvnieks?",
-        img: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=400&q=80",
+        img: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Parrot.red.macaw.1.arp.750pix.jpg",
         correct: "c",
         answers: { a: "Kaķis", b: "Suns", c: "Papagailis" }
     }
