@@ -186,19 +186,26 @@
  <button onclick="showSection('home')">⬅ Atgriezties uz sākumu</button>
   </div>
 </section>
-            
+
+
+    <section id="spele">
+<div class="container">
+
+    <h2>🎮 Noķer dzīvnieku!</h2>
+
+    <p>Punkti: <span id="score">0</span></p>
+
+    <div id="gameArea" style="position:relative; height:300px; background:#e6e6e0; border-radius:10px; overflow:hidden;">
+    </div>
+
+    <button onclick="startGame()">Sākt spēli</button>
+
+    <button onclick="show('home')">⬅ Atgriezties</button>
+
+</div>
+</section>
         
 
-
-
-
-
-
-
-
-
-
-    
 
 <script>
 function showSection(id) {
