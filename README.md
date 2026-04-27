@@ -1,0 +1,1 @@
+# Patstavigais_darbs_majdzivnieki3
