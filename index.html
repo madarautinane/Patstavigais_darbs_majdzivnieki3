@@ -190,22 +190,21 @@
 </section>
             
         
-    
-       <section id="spele">
-<div class="container">
+     <div id="game">
 
-    <h2>🐾 Uzmini dzīvnieku!</h2>
+        <p id="questionText"></p>
 
-   <p id="question">
-    Kas ir šis dzīvnieks?<br>
-    <img src="https://dinozoopasaule.lv/lv/getimage/uploads/questionanswer/C1KnaRtK_ZaWY0vZSxVqWE4toH5FhvRU.jpg?w=950;">
-</p>
+        <div id="imageBox"></div>
 
-    <button onclick="checkAnswer('suns')">Suns</button>
-    <button onclick="checkAnswer('kaķis')">Kaķis</button>
-    <button onclick="checkAnswer('trusis')">Trusis</button>
+        <button onclick="answer('a')">A</button>
+        <button onclick="answer('b')">B</button>
+        <button onclick="answer('c')">C</button>
 
-    <p id="result"></p>
+        <p id="result"></p>
+
+        <button onclick="nextQuestion()">Nākamais jautājums ➜</button>
+
+    </div>
 
      <button onclick="showSection('home')">⬅ Atgriezties uz sākumu</button>
   
