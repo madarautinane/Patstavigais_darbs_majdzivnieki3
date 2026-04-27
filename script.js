@@ -14,9 +14,9 @@ function startGame() {
     clearInterval(gameInterval);
     clearInterval(timerInterval);
 
-    gameInterval = setInterval(spawnAnimal, 800);
+    gameInterval = setInterval(spawnAnimal, 900);
 
-    timerInterval = setInterval(() => {
+    timerInterval = setInterval(function () {
         time--;
         document.getElementById("time").innerText = time;
 
