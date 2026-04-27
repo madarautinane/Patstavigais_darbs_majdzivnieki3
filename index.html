@@ -101,7 +101,10 @@
             <div class="card" onclick="showSection('suni')">Populārākās suņu šķirnes</div>
             <div class="card" onclick="showSection('kaki')">Populārākās kaķu šķirnes</div>
             <div class="card" onclick="showSection('citi')">Citi mājdzīvnieki</div>
-        </div>
+            <div class="card" onclick="show('spele')">
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80">
+    <p>Spēle 🐾</p>
+
     </div>
 </section>
 
@@ -182,9 +185,41 @@
             <li>Papagaiļi</li>
             <li>Bruņurupuči</li>
         </ul>
-        <button onclick="showSection('home')">⬅ Atgriezties uz sākumu</button>
+       <section id="spele">
+<div class="container">
+
+    <h2>🐾 Uzmini dzīvnieku!</h2>
+
+    <p id="question">Kas ir šis dzīvnieks: 🐶?</p>
+
+    <button onclick="checkAnswer('suns')">Suns</button>
+    <button onclick="checkAnswer('kaķis')">Kaķis</button>
+    <button onclick="checkAnswer('trusis')">Trusis</button>
+
+    <p id="result"></p>
+
+     <button onclick="showSection('home')">⬅ Atgriezties uz sākumu</button>
+
     </div>
 </section>
+
+
+  <section id="spele">
+<div class="container">
+
+    <h2>🐾 Uzmini dzīvnieku!</h2>
+
+    <p id="question">Kas ir šis dzīvnieks: 🐶?</p>
+
+    <button onclick="checkAnswer('suns')">Suns</button>
+    <button onclick="checkAnswer('kaķis')">Kaķis</button>
+    <button onclick="checkAnswer('trusis')">Trusis</button>
+
+    <p id="result"></p>
+
+  
+</div>
+</section>          
 
 <script>
 function showSection(id) {
