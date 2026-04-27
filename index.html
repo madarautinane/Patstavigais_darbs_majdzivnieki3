@@ -21,9 +21,9 @@
     }
 
     .container {
-        padding: 20px;
         max-width: 1000px;
         margin: auto;
+        padding: 20px;
     }
 
     .home-image {
@@ -36,29 +36,38 @@
 
     .menu {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 15px;
-        margin-top: 20px;
     }
 
     .card {
         background: white;
-        padding: 20px;
         border-radius: 10px;
-        text-align: center;
+        overflow: hidden;
         cursor: pointer;
-        transition: 0.3s;
         box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        transition: 0.3s;
+        text-align: center;
     }
 
     .card:hover {
-        background-color: #e6e6e0;
         transform: scale(1.03);
+        background: #e6e6e0;
+    }
+
+    .card img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .card p {
+        padding: 10px;
+        font-weight: bold;
     }
 
     section {
         display: none;
-        padding: 20px;
     }
 
     section.active {
@@ -79,8 +88,9 @@
         background-color: #5f6d63;
     }
 
-    ul {
-        line-height: 1.8;
+    a {
+        color: #2b5dff;
+        text-decoration: none;
     }
 </style>
 </head>
@@ -88,82 +98,129 @@
 <body>
 
 <header>
-   <h1 class="title">Mājdzīvnieki</h1>
+    <h1>Mājdzīvnieki</h1>
 </header>
 
-<!-- SĀKUMA LAPA -->
+
 <section id="home" class="active">
-    <div class="container">
-       <img class="home-image" src="https://i.pinimg.com/736x/4e/7c/9b/4e7c9b321b61adfb1de92b1e98467fe9.jpg" alt="mājdzīvnieki">
+<div class="container">
 
-        <div class="menu">
-            <div class="card" onclick="showSection('patversmes')">Latgales patversmes</div>
-            <div class="card" onclick="showSection('suni')">Populārākās suņu šķirnes</div>
-            <div class="card" onclick="showSection('kaki')">Populārākās kaķu šķirnes</div>
-            <div class="card" onclick="showSection('citi')">Citi mājdzīvnieki</div>
+    <img class="home-image" src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?auto=format&fit=crop&w=1200&q=80">
+
+    <div class="menu">
+
+        <div class="card" onclick="show('patversmes')">
+            <img src="https://images.unsplash.com/photo-1558944351-c1e1b4a5b7b1?auto=format&fit=crop&w=800&q=80">
+            <p>Jēkabpils patversme</p>
         </div>
+
+        <div class="card" onclick="show('suni')">
+            <img src="https://images.unsplash.com/photo-1517423568366-8b83523034fd?auto=format&fit=crop&w=800&q=80">
+            <p>Suņu šķirnes</p>
+        </div>
+
+        <div class="card" onclick="show('kaki')">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80">
+            <p>Kaķu šķirnes</p>
+        </div>
+
+        <div class="card" onclick="show('citi')">
+            <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=800&q=80">
+            <p>Citi mājdzīvnieki</p>
+        </div>
+
     </div>
+</div>
 </section>
 
-<!-- PATVERSMES -->
+
 <section id="patversmes">
-    <div class="container">
-        <h2>Latgales patversmes</h2>
-        <ul>
-            <li>Daugavpils dzīvnieku patversme</li>
-            <li>Rēzeknes patversme</li>
-            <li>Preiļu dzīvnieku aprūpes centrs</li>
-        </ul>
-        <button onclick="showSection('home')">⬅ Atgriezties uz sākumu</button>
-    </div>
+<div class="container">
+
+    <h2>Latgales dzīvnieku patversmes</h2>
+
+    <ul>
+        <li>
+            Daugavpils dzīvnieku patversme  
+            <br>
+            <a href="https://www.google.com/maps/search/Daugavpils+dz%C4%ABvnieku+patversme" target="_blank">📍 Skatīt kartē</a>
+        </li>
+
+        <li>
+            Rēzeknes dzīvnieku patversme  
+            <br>
+            <a href="https://www.google.com/maps/search/R%C4%93zeknes+dz%C4%ABvnieku+patversme" target="_blank">📍 Skatīt kartē</a>
+        </li>
+
+        <li>
+            Jēkabpils dzīvnieku patversme  
+            <br>
+            <a href="https://www.google.com/maps/search/J%C4%93kabpils+dz%C4%ABvnieku+patversme" target="_blank">📍 Skatīt kartē</a>
+        </li>
+    </ul>
+
+    <button onclick="show('home')">⬅ Atgriezties</button>
+
+</div>
 </section>
 
-<!-- SUŅI -->
+
 <section id="suni">
-    <div class="container">
-        <h2>Populārākās suņu šķirnes</h2>
-        <ul>
-            <li>Labradors retrīvers</li>
-            <li>Džeka Rasela terjers</li>
-            <li>Vācu aitu suns</li>
-            <li>Haskijs</li>
-        </ul>
-        <button onclick="showSection('home')">⬅ Atgriezties uz sākumu</button>
-    </div>
+<div class="container">
+    <h2>Populārākās suņu šķirnes</h2>
+
+    <img class="home-image" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=80">
+
+    <ul>
+        <li>Labradors</li>
+        <li>Vācu aitu suns</li>
+        <li>Haskijs</li>
+        <li>Bulldogs</li>
+    </ul>
+
+    <button onclick="show('home')">⬅ Atgriezties</button>
+</div>
 </section>
 
 <!-- KAĶI -->
 <section id="kaki">
-    <div class="container">
-        <h2>Populārākās kaķu šķirnes</h2>
-        <ul>
-            <li>Britu īsspalvainais kaķis</li>
-            <li>Siāmas kaķis</li>
-            <li>Maine Coon</li>
-            <li>Persiešu kaķis</li>
-        </ul>
-        <button onclick="showSection('home')">⬅ Atgriezties uz sākumu</button>
-    </div>
+<div class="container">
+    <h2>Populārākās kaķu šķirnes</h2>
+
+    <img class="home-image" src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=1200&q=80">
+
+    <ul>
+        <li>Britu īsspalvainais</li>
+        <li>Maine Coon</li>
+        <li>Siāmas kaķis</li>
+        <li>Persietis</li>
+    </ul>
+
+    <button onclick="show('home')">⬅ Atgriezties</button>
+</div>
 </section>
 
-<!-- CITI MĀJDZĪVNIEKI -->
+
 <section id="citi">
-    <div class="container">
-        <h2>Citi mājdzīvnieki</h2>
-        <ul>
-            <li>Truši</li>
-            <li>Jūrascūciņas</li>
-            <li>Papagaiļi</li>
-            <li>Bruņurupuči</li>
-        </ul>
-        <button onclick="showSection('home')">⬅ Atgriezties uz sākumu</button>
-    </div>
+<div class="container">
+    <h2>Citi mājdzīvnieki</h2>
+
+    <img class="home-image" src="https://images.unsplash.com/photo-1501706362039-c06b2d715385?auto=format&fit=crop&w=1200&q=80">
+
+    <ul>
+        <li>Truši</li>
+        <li>Jūrascūciņas</li>
+        <li>Papagaiļi</li>
+        <li>Bruņurupuči</li>
+    </ul>
+
+    <button onclick="show('home')">⬅ Atgriezties</button>
+</div>
 </section>
 
 <script>
-function showSection(id) {
-    let sections = document.querySelectorAll("section");
-    sections.forEach(sec => sec.classList.remove("active"));
+function show(id) {
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
     document.getElementById(id).classList.add("active");
 }
 </script>
