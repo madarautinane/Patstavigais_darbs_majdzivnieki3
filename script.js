@@ -3,13 +3,20 @@ let time = 20;
 let gameInterval;
 let timerInterval;
 
+function showSection(id) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
 function startGame() {
     score = 0;
     time = 20;
 
     document.getElementById("score").innerText = score;
     document.getElementById("time").innerText = time;
-    document.getElementById("finalResult").innerText = "";
+
+    document.getElementById("gameArea").innerHTML = "";
 
     clearInterval(gameInterval);
     clearInterval(timerInterval);
@@ -55,6 +62,6 @@ function endGame() {
     clearInterval(gameInterval);
     clearInterval(timerInterval);
 
-    document.getElementById("finalResult").innerText =
-        "🎉 Spēle beidzās! Tavi punkti: " + score;
+    document.getElementById("gameArea").innerHTML =
+        "<h3>🎉 Spēle beidzās! Tavi punkti: " + score + "</h3>";
 }
